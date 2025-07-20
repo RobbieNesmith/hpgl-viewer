@@ -50,6 +50,10 @@ const HPGLViewer = (options) => {
     return [x, y];
   };
 
+  const _length = (l) => {
+    return (l / options.machineRatio) / (options.machineTravelWidth / canvasWidth);
+  }
+
   /**
    * Get distance between two points
    * https://stackoverflow.com/questions/20916953/get-distance-between-two-points-in-canvas
