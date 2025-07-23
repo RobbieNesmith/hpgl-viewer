@@ -19,7 +19,14 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: path.resolve(__dirname, 'demo'),
-    publicPath: '/hpgl-viewer/lib/'
+    static: [
+      {
+        directory: path.join(__dirname, 'demo')
+      },
+      {
+        directory: path.join(__dirname, 'lib'),
+        publicPath: '/hpgl-viewer/lib'
+      }
+    ]
   }
 };
